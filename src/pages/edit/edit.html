@@ -1,0 +1,23 @@
+<!--
+  Generated template for the EditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+    <ion-fab middle right>
+        <button ion-fab color="danger" (click)="cancel()"><ion-icon name="close"></ion-icon></button>
+    </ion-fab>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-input [(ngModel)]="station.location.state" placeholder="State"></ion-input>
+  <ion-input [(ngModel)]="station.location.state" placeholder="City"></ion-input>
+  <button ion-button full color="submit" (click)="submit()">Save</button>
+</ion-content>
