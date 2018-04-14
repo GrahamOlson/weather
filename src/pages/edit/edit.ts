@@ -26,8 +26,15 @@ export class EditPage {
     settings: {}
   };
 
-  constructor(public viewCtrl: ViewController, public navParams: NavParams) {
+  constructor(private weather: WeatherProvider, public viewCtrl: ViewController, public navParams: NavParams) {
   }
+
+  submit(){
+    this.weather.conditions(this.station.location).subscribe(data => {
+      console.log(data);
+    })
+  }
+  
 
   cancel() {
     this.viewCtrl.dismiss(null);
